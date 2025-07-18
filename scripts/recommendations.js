@@ -285,7 +285,7 @@ const recommendationsData = {
         },
         { 
             name: "You're Gonna Live Forever in Me - John Mayer", 
-            image: "img/songs/You're Gonna Live Forever in Me oleh John Mayer di Apple Music.jpeg", 
+            image: "img/songs/You're Gonna Live Forever in Me .jpeg", 
             link: "https://open.spotify.com/track/51lPx6ZCSalL2kvSrDUyJc?si=3227942521514884"
         }
     ],
