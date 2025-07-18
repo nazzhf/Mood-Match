@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Match - Find Content Based on Your Mood</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+        
+</head>
+<body>
+	<script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+    <div class="page-transition"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">MM</div>
+                <div class="logo-text" data-lang-key="appTitle">Mood Match</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link" data-page="index" data-lang-key="navHome">Home</a></li>
+                    <li><a href="./about.html" class="nav-link" data-page="about" data-lang-key="navAbout">About</a></li>
+                    <li><a href="./contact.html" class="nav-link" data-page="contact" data-lang-key="navContact">Contact</a></li>
+                    <li>
+                        <select id="language-toggle">
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="en">English</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Home Page -->
+        <section class="home-page" id="home-page">
+            <h1 class="home-title" data-lang-key="homeTitle">Find Content That Matches Your Mood</h1>
+            <p class="home-subtitle" data-lang-key="homeSubtitle">Discover personalized film, music, and self-care recommendations based on how you're feeling right now.</p>
+            <a href="./quiz.html" class="try-now-btn" id="try-now-btn" data-page="quiz" data-lang-key="tryNowBtn">Take the Mood Quiz</a>
+            <!-- Spline 3D Viewer with your scene URL -->
+            <spline-viewer url="https://prod.spline.design/gx5Lm0lo986wTygK/scene.splinecode"></spline-viewer>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">MM</div>
+                        <div class="logo-text" data-lang-key="appTitle">Mood Match</div>
+                    </div>
+                    <p class="footer-slogan" data-lang-key="footerSlogan">Discover content that matches your mood.</p>
+                </div>
+                
+                <div class="footer-section footer-social">
+                    <h4 data-lang-key="footerSocialTitle">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://x.com/moodmatchmm?s=21" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/18308129___?igsh=MWw2b3RmaHl5NWN1OA==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1HoXsMzLQT/?mibextid=wwXIfr" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright" data-lang-key="footerCopyright">
+                © 2025 Mood Match. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Set default language ke Indonesia jika belum ada
+        if (!localStorage.getItem('language')) {
+            localStorage.setItem('language', 'id');
+        }
+    </script>
+    <script src="./scripts/translation.js"></script>
+    <script src="./scripts/background.js"></script>
+</body>
+</html>

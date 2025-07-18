@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Match - Recommendations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./styles/recommendations.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <div id="bg-animation"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">MM</div>
+                <div class="logo-text" data-lang-key="appTitle">Mood Match</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link" data-page="home-page" data-lang-key="navHome">Home</a></li>
+                    <li><a href="./about.html" class="nav-link" data-page="about" data-lang-key="navAbout">About</a></li>
+                    <li><a href="./contact.html" class="nav-link" data-page="contact" data-lang-key="navContact">Contact</a></li>
+                    <li>
+                        <select id="language-toggle">
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="en">English</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Recommendations Page -->
+        <section class="recommendations" id="recommendations">
+            <a href="./quiz.html" class="back-btn animated fadeUp delay-1" data-lang-key="backBtn">Back to Quiz</a>
+            <div class="mood-header">
+                <p class="mood-result animated fadeUp delay-2" data-lang-key="moodResult">Your current mood is:</p>
+                <h2 class="mood-selected animated fadeUp delay-3" id="mood-selected">Happy</h2>
+            </div>
+            <nav class="tab-nav animated fadeUp delay-4">
+                <button class="tab-btn active" data-tab="Movies" data-lang-key="recMovies">Movies & Korean Dramas</button>
+                <button class="tab-btn" data-tab="Music" data-lang-key="recMusic">Music</button>
+                <button class="tab-btn" data-tab="Activities" data-lang-key="recActivities">Self-Care</button>
+            </nav>
+            <div class="recs-container" id="recs-container">
+                <div class="tab-content active" id="tab-movies">
+                    <div class="rec-list"></div>
+                </div>
+                <div class="tab-content" id="tab-music">
+                    <div class="rec-list"></div>
+                </div>
+                <div class="tab-content" id="tab-activities">
+                    <div class="rec-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">MM</div>
+                        <div class="logo-text" data-lang-key="appTitle">Mood Match</div>
+                    </div>
+                    <p class="footer-slogan" data-lang-key="footerSlogan">Discover content that matches your mood.</p>
+                </div>
+                <div class="footer-section footer-social">
+                    <h4 data-lang-key="footerSocialTitle">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://x.com/moodmatchmm?s=21" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/18308129___?igsh=MWw2b3RmaHl5NWN1OA==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1HoXsMzLQT/?mibextid=wwXIfr" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright" data-lang-key="footerCopyright">
+                © 2025 Mood Match. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Set default language ke Indonesia jika belum ada
+        if (!localStorage.getItem('language')) {
+            localStorage.setItem('language', 'id');
+        }
+    </script>
+    <script src="./scripts/translation.js"></script>
+    <script src="./scripts/background.js"></script>
+    <script src="./scripts/recommendations.js"></script>
+</body>
+</html>

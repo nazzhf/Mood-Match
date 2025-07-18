@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Match - Mood Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./styles/quiz.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">MM</div>
+                <div class="logo-text" data-lang-key="appTitle">Mood Match</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link" data-page="home-page" data-lang-key="navHome">Home</a></li>
+                    <li><a href="./about.html" class="nav-link" data-page="about" data-lang-key="navAbout">About</a></li>
+                    <li><a href="./contact.html" class="nav-link" data-page="contact" data-lang-key="navContact">Contact</a></li>
+                    <li>
+                        <select id="language-toggle">
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="en">English</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Mood Quiz Page -->
+        <section class="mood-quiz" id="mood-quiz">
+            <h2 class="quiz-title" data-lang-key="quizTitle">Discover Your Mood</h2>
+            <p class="quiz-subtitle" data-lang-key="quizSubtitle">Answer the following questions to find content that matches how you're feeling today.</p>
+            <form id="mood-quiz-form">
+                <div class="quiz-question" data-question="1">
+                    <h3 data-lang-key="q1">1. How's your energy feeling right now?</h3>
+                    <label><input type="radio" name="q1" value="excited" required> <span data-lang-key="q1_excited">Feeling super hyped and ready to go</span></label>
+                    <label><input type="radio" name="q1" value="tense"> <span data-lang-key="q1_tense">Kinda tense and can't sit still</span></label>
+                    <label><input type="radio" name="q1" value="calm"> <span data-lang-key="q1_calm">Chill and feeling steady</span></label>
+                    <label><input type="radio" name="q1" value="drained"> <span data-lang-key="q1_drained">Totally wiped out and low on energy</span></label>
+                </div>
+                <div class="quiz-question" data-question="2">
+                    <h3 data-lang-key="q2">2. What's your current mood?</h3>
+                    <label><input type="radio" name="q2" value="joyful" required> <span data-lang-key="q2_joyful">Feeling good and full of positive vibes</span></label>
+                    <label><input type="radio" name="q2" value="frustrated"> <span data-lang-key="q2_frustrated">Lowkey annoyed and over it</span></label>
+                    <label><input type="radio" name="q2" value="sad"> <span data-lang-key="q2_sad">Down in the feels right now</span></label>
+                    <label><input type="radio" name="q2" value="anxious"> <span data-lang-key="q2_anxious">Stressed and mind's all over the place</span></label>
+                </div>
+                <div class="quiz-question" data-question="3">
+                    <h3 data-lang-key="q3">3. How do you feel about being around people today?</h3>
+                    <label><input type="radio" name="q3" value="social" required> <span data-lang-key="q3_social">Totally down to hang out and vibe</span></label>
+                    <label><input type="radio" name="q3" value="solitude"> <span data-lang-key="q3_solitude">Not in the mood just wanna be alone</span></label>
+                    <label><input type="radio" name="q3" value="irritated"> <span data-lang-key="q3_irritated">People are kinda getting on my nerves</span></label>
+                    <label><input type="radio" name="q3" value="neutral"> <span data-lang-key="q3_neutral">Don't really care either way, I'm chill</span></label>
+                </div>
+                <div class="quiz-question" data-question="4">
+                    <h3 data-lang-key="q4">4. How do you handle unexpected challenges today?</h3>
+                    <label><input type="radio" name="q4" value="confident" required> <span data-lang-key="q4_confident">Bring it on, I got this</span></label>
+                    <label><input type="radio" name="q4" value="stressed"> <span data-lang-key="q4_stressed">Honestly overwhelmed, it's a lot</span></label>
+                    <label><input type="radio" name="q4" value="angry"> <span data-lang-key="q4_angry">Annoyed AF, not in the mood for this</span></label>
+                    <label><input type="radio" name="q4" value="calm"> <span data-lang-key="q4_calm">Staying cool and not letting it get to me</span></label>
+                </div>
+                <div class="quiz-question" data-question="5">
+                    <h3 data-lang-key="q5">5. What's going on in your head right now?</h3>
+                    <label><input type="radio" name="q5" value="focused" required> <span data-lang-key="q5_focused">Locked in and thinking clear</span></label>
+                    <label><input type="radio" name="q5" value="racing"> <span data-lang-key="q5_racing">Brain's on turbo mode and won't chill</span></label>
+                    <label><input type="radio" name="q5" value="wandering"> <span data-lang-key="q5_wandering">Mind's just vibing, all over the place</span></label>
+                    <label><input type="radio" name="q5" value="negative"> <span data-lang-key="q5_negative">Stuck in a bad headspace tbh</span></label>
+                </div>
+                <div class="quiz-question" data-question="6">
+                    <h3 data-lang-key="q6">6. What kind of pace are you feeling today?</h3>
+                    <label><input type="radio" name="q6" value="fast" required> <span data-lang-key="q6_fast">Fast-forward mode, let's GO</span></label>
+                    <label><input type="radio" name="q6" value="slow"> <span data-lang-key="q6_slow">Just wanna take it slow and chill</span></label>
+                    <label><input type="radio" name="q6" value="moderate"> <span data-lang-key="q6_moderate">Somewhere in the middle, not too much</span></label>
+                    <label><input type="radio" name="q6" value="intense"> <span data-lang-key="q6_intense">Need to burn it off, go hard or go home</span></label>
+                </div>
+                <div class="quiz-question" data-question="7">
+                    <h3 data-lang-key="q7">7. How do you feel about the future rn?</h3>
+                    <label><input type="radio" name="q7" value="excited" required> <span data-lang-key="q7_excited">Pumped and full of hope</span></label>
+                    <label><input type="radio" name="q7" value="worried"> <span data-lang-key="q7_worried">Lowkey anxious about what's next</span></label>
+                    <label><input type="radio" name="q7" value="neutral"> <span data-lang-key="q7_neutral">Not really thinking that far, just vibing</span></label>
+                    <label><input type="radio" name="q7" value="hopeless"> <span data-lang-key="q7_hopeless">Feeling stuck and kinda hopeless</span></label>
+                </div>
+                <div class="quiz-question" data-question="8">
+                    <h3 data-lang-key="q8">8. How's your body feeling?</h3>
+                    <label><input type="radio" name="q8" value="energized" required> <span data-lang-key="q8_energized">Full of energy and ready to move</span></label>
+                    <label><input type="radio" name="q8" value="tense"> <span data-lang-key="q8_tense">Tight and restless, need to stretch or smth</span></label>
+                    <label><input type="radio" name="q8" value="relaxed"> <span data-lang-key="q8_relaxed">Loose, calm, and vibin'</span></label>
+                    <label><input type="radio" name="q8" value="fatigued"> <span data-lang-key="q8_fatigued">Drained and sluggish af</span></label>
+                </div>
+                <div class="quiz-question" data-question="9">
+                    <h3 data-lang-key="q9">9. How do you feel about what you've done today?</h3>
+                    <label><input type="radio" name="q9" value="proud" required> <span data-lang-key="q9_proud">Proud of myself, I did good</span></label>
+                    <label><input type="radio" name="q9" value="disappointed"> <span data-lang-key="q9_disappointed">Not gonna lie, I expected more</span></label>
+                    <label><input type="radio" name="q9" value="neutral"> <span data-lang-key="q9_neutral">Meh, just another regular day</span></label>
+                    <label><input type="radio" name="q9" value="frustrated"> <span data-lang-key="q9_frustrated">Mad at myself for not doing enough</span></label>
+                </div>
+                <div class="quiz-question" data-question="10">
+                    <h3 data-lang-key="q10">10. What kind of vibe do you want around you right now?</h3>
+                    <label><input type="radio" name="q10" value="vibrant" required> <span data-lang-key="q10_vibrant">Loud, fun, and full of life</span></label>
+                    <label><input type="radio" name="q10" value="peaceful"> <span data-lang-key="q10_peaceful">Peace and quiet, please</span></label>
+                    <label><input type="radio" name="q10" value="controlled"> <span data-lang-key="q10_controlled">I need order, no surprises today</span></label>
+                    <label><input type="radio" name="q10" value="isolated"> <span data-lang-key="q10_isolated">Just wanna be in my own bubble</span></label>
+                </div>
+                <button type="submit" class="submit-quiz-btn" data-lang-key="submitQuizBtn">Submit Quiz</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">MM</div>
+                        <div class="logo-text" data-lang-key="appTitle">Mood Match</div>
+                    </div>
+                    <p class="footer-slogan" data-lang-key="footerSlogan">Discover content that matches your mood.</p>
+                </div>
+                <div class="footer-section footer-social">
+                    <h4 data-lang-key="footerSocialTitle">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://x.com/moodmatchmm?s=21" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/18308129___?igsh=MWw2b3RmaHl5NWN1OA==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1HoXsMzLQT/?mibextid=wwXIfr" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright" data-lang-key="footerCopyright">
+                © 2025 Mood Match. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Set default language ke Indonesia jika belum ada
+        if (!localStorage.getItem('language')) {
+            localStorage.setItem('language', 'id');
+        }
+    </script>
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/quiz.js"></script>
+</body>
+</html>
