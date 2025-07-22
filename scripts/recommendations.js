@@ -920,7 +920,7 @@ const recommendationsData = {
         },
         { 
             name: "Lucky - Jason Mraz, Colbie Caillat", 
-            image: "img/songs/I'm Yours.jpeg", 
+            image: "img/songs/I’m Yours.jpeg", 
             link: "https://open.spotify.com/track/0IktbUcnAGrvD03AWnz3Q8?si=967a9d4206c44ab0"
         },
         { 
