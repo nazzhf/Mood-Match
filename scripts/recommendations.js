@@ -895,12 +895,12 @@ const recommendationsData = {
         },
         { 
             name: "Ghost - Justin Bieber", 
-            image: "img/songs/album cover.jpeg", 
+            image: "img/songs/Ghost.jpeg", 
             link: "https://open.spotify.com/track/6I3mqTwhRpn34SLVafSH7G?si=4b9b749853054c90"
         },
         { 
             name: "Good Looking - Suki Waterhouse", 
-            image: "img/songs/Ghost.jpeg", 
+            image: "img/songs/album cover.jpeg", 
             link: "https://open.spotify.com/track/0j3mqDTK4Z6lvrLzFCUUz6?si=06b03458be53492a"
         },
          { 
